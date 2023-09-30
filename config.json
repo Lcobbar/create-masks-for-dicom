@@ -1,0 +1,16 @@
+{
+    "MaskSuffix": {
+        "Posterior": "_mask_P.png",
+        "Anterior": "_mask_A.png"
+    },
+    "DefaultSelectionOption": {
+        "StrokeColor":"#39f",
+        "fillColor": [1, 1, 0, 0.1]
+    },
+    "Confirm": {
+        "AnteriorExists":"This mask already exists and it is marked as ANTERIOR. Do you want to overwrite it?",
+        "PosteriorExists":"This mask already exists and it is marked as POSTERIOR. Do you want to overwrite it?",
+        "AlreadyExists": "'This mask already exists. Do you want to overwrite it?"
+    }
+}
+  

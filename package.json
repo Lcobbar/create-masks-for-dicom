@@ -1,0 +1,64 @@
+{
+  "name": "create-masks",
+  "version": "1.0.0",
+  "description": "Create masks from DICOM images",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  
+  "build": {
+    "appId": "create-masks",
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": ["nsis"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lcobbar/create-masks-from-dicom.git"
+  },
+  "keywords": [
+    "mask",
+    "dicom"
+  ],
+  "author": "Lcobbar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lcobbar/create-masks-from-dicom/issues"
+  },
+  "homepage": "https://github.com/Lcobbar/create-masks-from-dicom#readme",
+  "devDependencies": {
+    "electron": "^26.1.0",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.11",
+    "dicom.ts": "^1.0.3",
+    "object-keys": "^1.1.1",
+    "semver": "^7.5.4"
+  }
+}

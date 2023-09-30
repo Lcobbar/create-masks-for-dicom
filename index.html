@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Create masks</title>
+        <link rel="stylesheet" href="src/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="src/js/mouse.js"></script>
+        <script src="src/js/utils.js"></script>  
+        <script src="src/js/app.js"></script>  
+    </head>
+    <body>
+        <div class="button-container">
+            <div id="leftControls">
+                <label for="folderInput" id="folderUploader" data-tooltip="Select folder" class="custom-uploader icon-button">
+                    <i class="fas fa-folder-open"></i>
+                </label>
+                <input type="file" id="folderInput" webkitdirectory style="display: none;">
+
+                <button id="backButton" class="icon-button" data-tooltip="Back" disabled>
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <button id="nextButton" class="icon-button" data-tooltip="Next" disabled>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+              
+            </div>
+            <div id="fileInfo"> 
+                <span id="counter" class="large-text"></span> 
+                <span id="filename"></span>
+            </div>
+
+            <div id="rightControls">
+                <button id="undoButton" class="icon-button" data-tooltip="Undo"  disabled><i class="fas fa-undo"></i></button>  
+                <div class="btn-wrapper">
+                    <button id="dummyPosteriorButton" class="dummy-button" disabled>Posterior</button>
+                    <input type="checkbox" id="posteriorCheckbox" class="overlay-checkbox" disabled>
+                </div>
+                <button id="saveButton" class="icon-button" data-tooltip="Save" disabled><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="dicomCanvas"></canvas>
+            <canvas id="maskCanvas"></canvas>
+        </div>
+    </body>
+</html>
+
